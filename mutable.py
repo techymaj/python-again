@@ -9,5 +9,8 @@ print(another_list)
 
 print(shopping_list is another_list)
 
-wider_list = another_list[::-1]
+wider_list = another_list[::]
 print(wider_list)
+
+print(f"Wider list ID: {id(wider_list)}")
+print(f"shopping list ID: {id(shopping_list)}")
