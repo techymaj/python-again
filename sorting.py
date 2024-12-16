@@ -17,9 +17,20 @@ letters = sorted(pangram) # Uppercase and spaces sort first
 print(letters)
 
 sentence = "Majaliwa M. Wilfried"
+sorted_pangram = sorted(pangram)
 
-splits = pangram.split(" ")
+splits = sorted_pangram
+del splits[:8]
 print(splits)
-for word in splits:
-    for letter in word:
-        print(letter)
+# for word in splits:
+#     for letter in word:
+#         print(letter)
+
+names = ["Jax",
+         "Maria",
+         "brian",
+         "Calisto",
+         "Ganymede"]
+
+names.sort(key=str.casefold)
+print(names)
