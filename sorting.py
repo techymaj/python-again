@@ -13,7 +13,7 @@ print(combined)
 print(combined is even)
 
 pangram = "The quick brown fox jumps over the lazy dog"
-letters = sorted(pangram) # Uppercase and spaces sort first
+letters = sorted(pangram)  # Uppercase and spaces sort first
 print(letters)
 
 sentence = "Majaliwa M. Wilfried"
@@ -34,3 +34,22 @@ names = ["Jax",
 
 names.sort(key=str.casefold)
 print(names)
+
+initialized = list("Majaliwa Wilfried Mbuto")
+print(initialized)
+
+a = 5, 4, 3, 2, 1
+t = *a, # becomes a tuple
+b = [*a] # becomes a list
+
+print(t)
+print(b)
+
+*x, y, a, b, c = a
+print(x)
+print(y)
+x.append("x")
+print(x)
+print(y)
+print(type(x))
+print(type(y))
