@@ -55,3 +55,12 @@ for i in range(len(DATA) - 1, -1, -1):
         print(f"Removing {DATA[i]}")
         del DATA[i]
 print(DATA)
+
+DATA = [2, 4, 101, 100, 123, 133, 144, 112, 133, 200, 201, 404, 500]
+top_index = len(DATA) - 1
+for i, value in enumerate(reversed(DATA)):
+    if value not in range(140, 201):
+        print(f"Deleting: {value}")
+        del DATA[top_index - i]
+else:
+    print(DATA)
