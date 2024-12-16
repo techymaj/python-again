@@ -11,3 +11,15 @@ combined.sort(reverse=True)
 print(combined)
 
 print(combined is even)
+
+pangram = "The quick brown fox jumps over the lazy dog"
+letters = sorted(pangram) # Uppercase and spaces sort first
+print(letters)
+
+sentence = "Majaliwa M. Wilfried"
+
+splits = pangram.split(" ")
+print(splits)
+for word in splits:
+    for letter in word:
+        print(letter)
