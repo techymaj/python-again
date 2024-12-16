@@ -44,12 +44,15 @@ b = [*a] # becomes a list
 
 print(t)
 print(b)
+print(type(a))
 
 *x, y, a, b, c = a
 print(x)
 print(y)
+print(a)
 x.append("x")
 print(x)
 print(y)
 print(type(x))
 print(type(y))
+print(type(a))
