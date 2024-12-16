@@ -22,3 +22,9 @@ if any(elements):
     print(f"copied data: {copy_data}")
 else:
     print("That's an empty list")
+
+x = 0
+result = ("Positive" if x > 0
+          else "Negative" if x < 0
+          else "Zero")
+print(result)
