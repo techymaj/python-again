@@ -47,3 +47,11 @@ print(lucky_numbers)
 
 name = "wilfried".upper()
 print(name)
+
+# Filter backwards
+DATA = [2, 4, 101, 100, 123, 133, 144, 112, 133, 200, 201, 404, 500]
+for i in range(len(DATA) - 1, -1, -1):
+    if DATA[i] not in range(140, 201):
+        print(f"Removing {DATA[i]}")
+        del DATA[i]
+print(DATA)
