@@ -24,17 +24,17 @@ flowers = []
 shrubs = []
 
 # write your code here
-for item in data:
-    if "Shrub" in item:
-        shrubs.append(item)
-    elif "Flower" in item:
-        flowers.append(item)
+for plant in data:
+    if "Shrub" in plant:
+        shrubs.append(plant)
+    elif "Flower" in plant:
+        flowers.append(plant)
 else:
     data_copy = data[:] # backup data
     clean_data = []
-    for item in data:
-        if "Flower" in item or "Shrub" in item:
-            splits = item.split(" - ")
+    for plant in data:
+        if "Flower" in plant or "Shrub" in plant:
+            splits = plant.split(" - ")
             clean_data.append(splits[0])
 
     print(clean_data)
