@@ -7,7 +7,7 @@ albums = [
 ]
 
 for number, album in enumerate(albums):
-    artist, title, year = (tag for tag in album)
+    title, artist, year = (tag for tag in album)
     print(
         f"Album: #{number + 1}\n "
         f"Artist: {artist}\n "
