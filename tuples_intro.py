@@ -7,10 +7,14 @@ albums = [
 ]
 
 for number, album in enumerate(albums):
-    title, artist, year = (tag.upper() if isinstance(tag, str) else tag for tag in album)
+    title, artist, year = (
+        tag.upper() if isinstance(tag, str) else tag for tag in album
+    )
     print(
-        f"Album: #{number + 1}\n "
-        f"Artist: {artist}\n "
-        f"Title: {title}\n "
-        f"Year: {year}\n"
+        f"Album: #{number + 1}",
+        f"Artist: {artist}",
+        f"Title: {title}",
+        f"Year: {year}",
+        sep="\n",
+        end="\n\n"
     )
