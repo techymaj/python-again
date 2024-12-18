@@ -4,20 +4,21 @@ def palindrome_sentence(sentence):
     new_sentence = "".join(splits)
     print(f"After splitting and joining: {new_sentence}")
     if new_sentence.isalnum():
-        if new_sentence == new_sentence[::-1]:
-            return f"{sentence} is a palindrome"
-        else:
-            return f"{sentence} is not a palindrome"
+        return palindrome_or_not(checked=new_sentence, entered_word=sentence)
     else:
         has_non_alnum_chars = "".join((
             c for c in new_sentence if c.isalnum() is True
         ))
         print("Alphanumeric characters detected:")
         print(f"After removing alphanumeric characters: {has_non_alnum_chars}")
-        if has_non_alnum_chars == has_non_alnum_chars[::-1]:
-            return f"{sentence} is a palindrome"
-        else:
-            return f"{sentence} is not a palindrome"
+        return palindrome_or_not(checked=has_non_alnum_chars, entered_word=sentence)
+
+
+def palindrome_or_not(checked="", entered_word="entered_word"):
+    if checked == checked[::-1]:
+        return f"{entered_word} is a palindrome"
+    else:
+        return f"{entered_word} is not a palindrome"
 
 
 while True:
