@@ -1,6 +1,9 @@
 def is_palindrome(word):
     """
     Checks whether the word is a palindrome.
+
+    A palindrome is a string that reads the same forwards as backwards.
+
     :param word: The word to check.
     :return: A friendly message: `str`, that confirms whether word is a palindrome or not.
     """
