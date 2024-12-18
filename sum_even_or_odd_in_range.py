@@ -6,5 +6,6 @@ def sum_eo(n=0, t=""):
     else:
         return -1
 
+
 summed = sum_eo(11, 'e')
 print(summed)
