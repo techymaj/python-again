@@ -16,3 +16,7 @@ def sum_eo(n=0, t=""):
 
 summed = sum_eo(11, 'e')
 print(summed)
+print("*" * 80)
+# print(sum_eo.__doc__)
+help(sum_eo)
+print("*" * 80)
