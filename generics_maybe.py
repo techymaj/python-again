@@ -10,7 +10,7 @@ def sum_of_floats(it: list[str]) -> float:
         appended.append(int(i))
     return sum(appended)
 
-# compiler will complain it's not ["5", "4", "3", "2", "1"]
+# The IDE will complain it's not ["5", "4", "3", "2", "1"]
 # but still be able tu run the code. so not strict generics
 sums = sum_of_floats([5, 4, 3, 2, 1])
 print(sums)
