@@ -1,4 +1,4 @@
-def fibonacci_sequence(n):
+def fibonacci_sequence(n: int) -> list[int]:
     """
     Generate a fibonacci sequence up to `Fn-1`. n should be positive.
 
