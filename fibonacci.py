@@ -6,6 +6,7 @@ def fibonacci_sequence(n: int) -> list[int]:
     the two numbers that precede it.
 
     :param n: The number of fibonacci numbers to generate.
+    :raises TypeError: If a value that's not an integer is entered for n
     :return: A list of fibonacci numbers.
     """
 
