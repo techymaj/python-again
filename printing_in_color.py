@@ -1,4 +1,7 @@
 from color_codes import *
+from colorama import just_fix_windows_console
+
+just_fix_windows_console()
 
 def print_in_color(*effects: "A list of styles", text: str, reset: str = RESET) -> None:
     """
