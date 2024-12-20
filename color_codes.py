@@ -61,7 +61,7 @@ HIDDEN = '\u001b[8m'
 
 just_fix_windows_console()
 
-def print_in_color(*effects: "A list of styles", text: str, reset: str = RESET) -> None:
+def print_in_color(text: str, *effects: "A list of styles", reset: str = RESET) -> None:
     """
     Prints a given text in the color specified by `effect`.
 
