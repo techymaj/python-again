@@ -48,11 +48,12 @@ if __name__ == "__main__":
     ligue_1: dict[int, str] = top_5_football_clubs.get("Ligue 1")
     print(ligue_1)
 
-    popped: str = ligue_1.pop(3)  # delete item and return the value
+    popped: str = ligue_1.pop(13, f"Key '{13}' Not found")  # delete item and return the value
     print(popped)
 
+    del ligue_1[2] # delete item
     print(ligue_1)
 
-    ligue_1.update({3: "Lyon"})  # create new entry
+    ligue_1.update({13: "Versailles"})  # create new entry
 
     print(ligue_1)

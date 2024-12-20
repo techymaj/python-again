@@ -1,5 +1,6 @@
 from color_codes import *
 from dict_intro import top_5_football_clubs
+# import this
 
 # for key, teams in top_5_football_clubs.items():
 #     for k, v in teams.items():
@@ -10,3 +11,5 @@ from dict_intro import top_5_football_clubs
 
 top_5_football_clubs["EPL"][6] = "Aston Villa"
 print_ic(top_5_football_clubs, BLUE, REVERSE)
+
+# print_ic(this, CYAN, REVERSE)
