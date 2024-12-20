@@ -1,4 +1,4 @@
-top_5_football_clubs:dict[str, dict[int, str]] = {
+top_5_football_clubs: dict[str, dict[int, str]] = {
     "EPL": {
         1: "Arsenal",
         2: "Liverpool",
@@ -51,9 +51,13 @@ if __name__ == "__main__":
     popped: str = ligue_1.pop(13, f"Key '{13}' Not found")  # delete item and return the value
     print(popped)
 
-    del ligue_1[2] # delete item
+    del ligue_1[2]  # delete item
     print(ligue_1)
 
     ligue_1.update({13: "Versailles"})  # create new entry
+
+    print(ligue_1)
+
+    ligue_1.popitem()  # LIFO
 
     print(ligue_1)
