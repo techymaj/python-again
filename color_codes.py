@@ -1,3 +1,5 @@
+from colorama import just_fix_windows_console
+
 # Some ANSI escape sequences for colours and effects
 BLACK = '\u001b[30m'
 RED = '\u001b[31m'
@@ -12,3 +14,18 @@ RESET = '\u001b[0m'
 BOLD = '\u001b[1m'
 UNDERLINE = '\u001b[4m'
 REVERSE = '\u001b[7m'
+
+
+just_fix_windows_console()
+
+def print_in_color(*effects: "A list of styles", text: str, reset: str = RESET) -> None:
+    """
+    Prints a given text in the color specified by `effect`.
+
+    :param effects: A list of the various styles to apply. e.g
+        `BLUE, BOLD, UNDERLINE`
+    :param text: The text to apply the color to.
+    :param reset: Resets the effect to the terminal default.
+    """
+    combined_effects = ''.join(effects)
+    print(f"{combined_effects}", f"{text}", f"{reset}")
