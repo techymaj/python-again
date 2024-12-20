@@ -36,22 +36,23 @@ top_5_football_clubs:dict[str, dict[int, str]] = {
     },
 }
 
-print(top_5_football_clubs["EPL"][1]) # Read value based on key
+if __name__ == "__main__":
+    print(top_5_football_clubs["EPL"][1])  # Read value based on key
 
-new_comer: str = "Newcastle United"
-top_5_football_clubs["EPL"][5] = new_comer # update key with new value
+    new_comer: str = "Newcastle United"
+    top_5_football_clubs["EPL"][5] = new_comer  # update key with new value
 
-print(top_5_football_clubs["EPL"].get(5)) # retrieve value based on key
-print(top_5_football_clubs["EPL"])
+    print(top_5_football_clubs["EPL"].get(5))  # retrieve value based on key
+    print(top_5_football_clubs["EPL"])
 
-ligue_1: dict[int, str] = top_5_football_clubs.get("Ligue 1")
-print(ligue_1)
+    ligue_1: dict[int, str] = top_5_football_clubs.get("Ligue 1")
+    print(ligue_1)
 
-popped: str = ligue_1.pop(3) # delete item and return the value
-print(popped)
+    popped: str = ligue_1.pop(3)  # delete item and return the value
+    print(popped)
 
-print(ligue_1)
+    print(ligue_1)
 
-ligue_1.update({3: "Lyon"}) # create new entry
+    ligue_1.update({3: "Lyon"})  # create new entry
 
-print(ligue_1)
+    print(ligue_1)
