@@ -13,3 +13,19 @@ case = {
 
 new_case = dict.fromkeys(case, 20)
 print(new_case)
+
+keys = new_case.keys()
+print(keys)
+
+for item in new_case.keys():
+    print(item)
+
+empty_case = {
+
+}
+
+# update can also take an iterable of tuples. don't unpack the tuple
+empty_case.update(
+    slot for slot in case.items()
+)
+print(f"Not so empty, now, are ya? {empty_case}")
