@@ -22,8 +22,10 @@ print(farm_animals)
 
 
 new_set_comprehension = {
-    unique_value for unique_value in wild_animals | farm_animals
-    if isinstance(unique_value, str) or isinstance(unique_value, tuple)
+    unique_value for unique_value
+    in wild_animals | farm_animals
+    if isinstance(unique_value, str)
+    or isinstance(unique_value, tuple)
 }
 
 print(new_set_comprehension)
@@ -56,3 +58,23 @@ print(symm_diff)
 print("OR")
 symm_fancy_diff = wild_animals ^ farm_animals
 print(symm_fancy_diff)
+
+
+animals = {"cow", "chicken", "cow", "goat"} # dict is k:v
+print(animals)
+
+print()
+
+set_one = {1, 2, 3, 4, 5}
+set_two = {5, 4, 3, 2, 1}
+
+if set_two == set_one:
+    print("Equal, yes")
+else:
+    print("Not equal")
+
+
+if set_two is set_one:
+    print("Same, yes")
+else:
+    print("But different")
