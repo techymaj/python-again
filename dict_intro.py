@@ -61,3 +61,13 @@ if __name__ == "__main__":
     ligue_1.popitem()  # LIFO
 
     print(ligue_1)
+
+    print()
+
+    dd = {
+        1: "one",
+        2: "two",
+        3: "three",
+    }
+
+    print(1 in dd)

@@ -78,3 +78,9 @@ if set_two is set_one:
     print("Same, yes")
 else:
     print("But different")
+
+print()
+
+
+ns = set("12345")
+print(ns)
