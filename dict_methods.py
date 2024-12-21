@@ -1,3 +1,5 @@
+import copy
+
 from dict_intro import top_5_football_clubs
 
 pantry: list[str] = ["chicken", "spam", "egg", "bread", "lemon"]
@@ -50,7 +52,51 @@ print(case_copy)
 print("*" * 120)
 
 clubs = top_5_football_clubs.copy() # creates a shallow copy
-print(clubs)
+print(top_5_football_clubs)
 
 top_5_football_clubs["EPL"][5] = "Aston Villa" # copies references so the copied dict is also affected
 print(clubs)
+
+print()
+
+# shallow copy demo. nested gives you references
+animals = {
+    "lion": "scary",
+    "elephant": "big",
+    "teddy": {
+        1: "cuddly"
+    },
+}
+
+# deep copy demo
+animals_deep = {
+    "lion": "scary",
+    "elephant": "big",
+    "teddy": {
+        1: "cuddly"
+    },
+}
+
+# shallow
+things = animals.copy()
+# animals["teddy"][1] = "toy"
+# print(things["teddy"][1])
+# print(animals["teddy"][1])
+
+# deep. complete independence between animals_deep & into_the_deep
+# into_the_deep = copy.deepcopy(animals_deep)
+# animals_deep["teddy"][1] = "cute & cuddly"
+# print(animals_deep)
+# print(into_the_deep)
+
+# at level 1, copy() gives you a "deep copy" unless the value is mutable
+wild_animals = {
+    "lion": ["scary"],
+    "elephant": "big",
+    "cheetah": "fast",
+}
+
+copied = wild_animals.copy()
+wild_animals["lion"].append("king of the jungle")
+print(wild_animals)
+print(copied)
