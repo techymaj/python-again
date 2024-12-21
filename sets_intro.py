@@ -65,7 +65,7 @@ print(animals)
 
 print()
 
-set_one = {1, 2, 3, 4, 5}
+set_one = {10, 20, 30, 40, 50}
 set_two = {5, 4, 3, 2, 1}
 
 if set_two == set_one:
@@ -81,6 +81,6 @@ else:
 
 print()
 
-
-ns = set("12345")
-print(ns)
+print(set_one)
+set_one.pop()
+print(set_one)
