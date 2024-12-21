@@ -84,3 +84,8 @@ print()
 print(set_one)
 set_one.pop()
 print(set_one)
+
+tt = dict(a=1, b=2, c=3)
+print(tt)
+tt.clear() # list, dict, or set implement clear
+print(tt)
