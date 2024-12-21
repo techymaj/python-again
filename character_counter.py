@@ -9,7 +9,7 @@ split_text = text.split()
 join_text = "".join(split_text)
 lower_case_text = join_text.casefold()
 remove_alnum = "".join(
-    (c for c in lower_case_text if c.isalnum() is True)
+    c for c in lower_case_text if c.isalnum() is True
 )
 
 for character in remove_alnum:
