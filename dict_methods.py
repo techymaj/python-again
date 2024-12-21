@@ -8,7 +8,6 @@ pantry: list[str] = ["chicken", "spam", "egg", "bread", "lemon"]
 new_dictionary: dict[str, str] = dict.fromkeys(pantry)
 print(new_dictionary)
 
-
 case = {
     "beer": 2,
     "kegs": 4,
@@ -47,14 +46,14 @@ print(case.values())
 for val in case.values():
     print(val)
 
-case_copy: dict = case.copy() # creates a shallow copy
+case_copy: dict = case.copy()  # creates a shallow copy
 print(case_copy)
 print("*" * 120)
 
-clubs = top_5_football_clubs.copy() # creates a shallow copy
+clubs = top_5_football_clubs.copy()  # creates a shallow copy
 print(top_5_football_clubs)
 
-top_5_football_clubs["EPL"][5] = "Aston Villa" # copies references so the copied dict is also affected
+top_5_football_clubs["EPL"][5] = "Aston Villa"  # copies references so the copied dict is also affected
 print(clubs)
 
 print()
@@ -91,12 +90,14 @@ things = animals.copy()
 
 # at level 1, copy() gives you a "deep copy" unless the value is mutable
 wild_animals = {
-    "lion": ["scary"],
+    "lion": ["scary"],  # I am mutable, share me
     "elephant": "big",
     "cheetah": "fast",
 }
 
 copied = wild_animals.copy()
 wild_animals["lion"].append("king of the jungle")
+wild_animals["cheetah"] = "super fast"
+
 print(wild_animals)
 print(copied)
