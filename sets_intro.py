@@ -65,7 +65,7 @@ print(animals)
 
 print()
 
-set_one = {10, 20, 30, 40, 50}
+set_one = {1, 2, 3, 4, 5}
 set_two = {5, 4, 3, 2, 1}
 
 if set_two == set_one:
@@ -82,8 +82,8 @@ else:
 print()
 
 print(set_one)
-set_one.pop()
-print(set_one)
+pp = set_one.pop()
+print(set_one, f"Popped: {pp}")
 
 tt = dict(a=1, b=2, c=3)
 print(tt)
