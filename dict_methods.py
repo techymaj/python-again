@@ -41,6 +41,7 @@ case["safi"] = 100
 
 print(f"Not so empty, now, are ya? {empty_case}")
 
+print(case.keys())
 print(case.values())
 
 for val in case.values():
