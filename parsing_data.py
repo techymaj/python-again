@@ -1,3 +1,5 @@
+from color_codes import print_ic, BLUE
+
 filename = "country_info.txt"
 
 with open(filename) as country_info:
@@ -30,6 +32,8 @@ entered_country = input("Enter country name: ").casefold()
 
 if entered_country in countries_dict:
     _, city, _, _, _, _, _ = countries_dict[entered_country].values()
-    print(f"{entered_country} exists. Its capital city is: {city}")
+    print_ic(f"{entered_country.upper()}", BLUE)
+    print("\texists. Its capital city is:", end="")
+    print_ic(f"{city}", BLUE)
 else:
     print("I've never heard of that country in my life")
