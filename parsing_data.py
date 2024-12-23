@@ -26,8 +26,6 @@ for value in list_to_parse[1:]:
 
     countries_dict.update({country.casefold(): country_dict})
 
-print(countries_dict["uganda"])
-
 entered_country = input("Enter country name: ").casefold()
 
 if entered_country in countries_dict:
