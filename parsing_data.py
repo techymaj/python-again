@@ -1,4 +1,4 @@
-from color_codes import print_ic, BLUE
+from color_codes import print_ic, BLUE, MAGENTA, RED
 
 filename = "country_info.txt"
 
@@ -38,6 +38,6 @@ while True:
         _, city, _, _, _, _, _ = countries_dict[entered_country].values()
         print_ic(f"{entered_country.upper()}", BLUE)
         print("\texists. Its capital city is:", end="")
-        print_ic(f"{city}\n", BLUE)
+        print_ic(f"{city}\n", MAGENTA)
     else:
-        print("I've never heard of that country in my life")
+        print_ic("I've never heard of that country in my life\n", RED)
