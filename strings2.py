@@ -1,5 +1,5 @@
          #01234567890123
-parrot = "arsenal"
+parrot = "My team arsenal"
 
 print(parrot[::2])
 print(parrot[::-1])
@@ -10,3 +10,5 @@ print(letters[-4:]) # Last 4 items
 print(letters[-1:]) # Last item
 print(letters[:1]) # First item. No error if sequence is empty
 print(letters[:4]) # First 4 items
+
+print(parrot[:-5])
