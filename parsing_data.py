@@ -28,12 +28,16 @@ for value in list_to_parse[1:]:
 
     countries_dict.update({country.casefold(): country_dict})
 
-entered_country = input("Enter country name: ").casefold()
 
-if entered_country in countries_dict:
-    _, city, _, _, _, _, _ = countries_dict[entered_country].values()
-    print_ic(f"{entered_country.upper()}", BLUE)
-    print("\texists. Its capital city is:", end="")
-    print_ic(f"{city}", BLUE)
-else:
-    print("I've never heard of that country in my life")
+while True:
+    entered_country = input("Enter country name, (Qq) to exit: ").casefold()
+
+    if entered_country == "Q".casefold(): break
+
+    if entered_country in countries_dict:
+        _, city, _, _, _, _, _ = countries_dict[entered_country].values()
+        print_ic(f"{entered_country.upper()}", BLUE)
+        print("\texists. Its capital city is:", end="")
+        print_ic(f"{city}\n", BLUE)
+    else:
+        print("I've never heard of that country in my life")
