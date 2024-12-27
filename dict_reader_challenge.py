@@ -1,6 +1,9 @@
 import csv
+import json
 
 data_to_read = "country_info.txt"
+
+dicts = {}
 
 with open(data_to_read, encoding="utf-8", newline="") as challenge:
     first_3 = ""
@@ -12,4 +15,12 @@ with open(data_to_read, encoding="utf-8", newline="") as challenge:
     reader = csv.DictReader(challenge, dialect=country_dialect)
 
     for row in reader:
-        print(row)
+        if "Country" in row:
+            cty = row["Country"]
+        dicts.update({cty: row})
+
+
+print(dicts)
+
+with open("country.json", "w", encoding="Utf-8") as cty_json:
+    json.dump(dicts, cty_json)
