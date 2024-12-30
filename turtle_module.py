@@ -40,19 +40,21 @@ def encircled_square(length: int) -> None:
 
 
 # encircled_square(150)
-# turtle.speed("fast")
-# for s in range(72):
-#     encircled_square(100)
-#     turtle.left(5)
-#     turtle.color(colors[random.randint(0, 9)])
+turtle.speed("fast")
+turtle.Screen().tracer(0)  # Disable turtle animation
+for s in range(72):
+    encircled_square(100)
+    turtle.left(5)
+    turtle.color(colors[random.randint(0, 9)])
+
+turtle.Screen().update()
+turtle.done()
+encircled_square(4)
+# print(dir())
 #
-# turtle.done()
-# encircled_square(4)
-print(dir())
-
-g = globals()
-print(g["draw_squares"])
-
-print()
-print(dir(__builtins__))
-print("len" in dir(__builtins__))
+# g = globals()
+# print(g["draw_squares"])
+#
+# print()
+# print(dir(__builtins__))
+# print("len" in dir(__builtins__))
