@@ -4,6 +4,7 @@ import random
 
 colors = ["Magenta", "Cyan", "Orange", "Yellow", "Purple", "Turquoise", "Fuchsia", "Green", "Blue", "Coral"]
 
+
 def draw_squares(length, angle) -> None:
     """
     Draw a square of length, `length`
@@ -17,6 +18,7 @@ def draw_squares(length, angle) -> None:
     for side in range(4):
         turtle.forward(length)
         turtle.right(angle)
+
 
 def encircled_square(length: int) -> None:
     """
@@ -33,6 +35,9 @@ def encircled_square(length: int) -> None:
     turtle.right(135)
     turtle.circle(radius)
     turtle.left(135)
+    print(dir())
+    print(locals())  # shows the namespace dictionary
+
 
 # encircled_square(150)
 # turtle.speed("fast")
@@ -42,5 +47,5 @@ def encircled_square(length: int) -> None:
 #     turtle.color(colors[random.randint(0, 9)])
 #
 # turtle.done()
-
+encircled_square(4)
 print(dir())
