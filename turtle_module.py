@@ -47,5 +47,12 @@ def encircled_square(length: int) -> None:
 #     turtle.color(colors[random.randint(0, 9)])
 #
 # turtle.done()
-encircled_square(4)
+# encircled_square(4)
 print(dir())
+
+g = globals()
+print(g["draw_squares"])
+
+print()
+print(dir(__builtins__))
+print("len" in dir(__builtins__))
