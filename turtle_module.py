@@ -35,10 +35,12 @@ def encircled_square(length: int) -> None:
     turtle.left(135)
 
 # encircled_square(150)
-turtle.speed("fast")
-for s in range(72):
-    encircled_square(100)
-    turtle.left(5)
-    turtle.color(colors[random.randint(0, 9)])
+# turtle.speed("fast")
+# for s in range(72):
+#     encircled_square(100)
+#     turtle.left(5)
+#     turtle.color(colors[random.randint(0, 9)])
+#
+# turtle.done()
 
-turtle.done()
+print(dir())
