@@ -1,10 +1,14 @@
-choice = int(input("Pick a number: "))
+import sys
+import math
+
+# choice = int(input("Pick a number: "))
+sys.setrecursionlimit(10000)
 recursion_depth = 0
 
-def collatz_conjecture(pick: int) -> None:
+def collatz_conjecture(pick: float) -> None:
     global recursion_depth
     recursion_depth = recursion_depth + 1
-    if recursion_depth == 900:
+    if recursion_depth == 9999:
         return
     if pick % 2 == 0:
         next_num = pick // 2
@@ -15,5 +19,6 @@ def collatz_conjecture(pick: int) -> None:
 
     return collatz_conjecture(next_num)
 
-
-collatz_conjecture(choice)
+ridiculous_number = math.pow(2, 2000)
+print(ridiculous_number)
+collatz_conjecture(ridiculous_number)
