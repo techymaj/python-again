@@ -12,9 +12,11 @@ timezones = {
 
 def print_timezone(major_city: str, timezone: str) -> None:
     city = zoneinfo.ZoneInfo(timezone)
-    time_in_city = datetime.now(city).strftime("%H:%M:%S")
+    time_in_city = datetime.now(city)
     print(f"Time in {major_city}:")
-    print_ic(f"{time_in_city}", BLUE)
+    short_time = time_in_city.strftime("%H:%M:%S")
+    tz = time_in_city.tzname()
+    print_ic(f"{short_time} - " f"{tz}", BLUE)
 
 
 for each_city in timezones:
