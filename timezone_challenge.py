@@ -1,18 +1,21 @@
 import zoneinfo
 from datetime import datetime
 
-paris = zoneinfo.ZoneInfo("Europe/Paris")
-time_in_paris = datetime.now(paris)
-print(f"Time in Paris:\n {time_in_paris}")
+from color_codes import print_ic, BLUE
 
-london = zoneinfo.ZoneInfo("Europe/London")
-time_in_london = datetime.now(london)
-print(f"Time in London:\n {time_in_london}")
+timezones = {
+    "Paris": "Europe/Paris",
+    "London": "Europe/London",
+    "Hong_Kong": "Asia/Hong_Kong",
+    "Nairobi": "Africa/Nairobi",
+}
 
-hong_kong = zoneinfo.ZoneInfo("Asia/Hong_Kong")
-time_in_hong_kong = datetime.now(hong_kong)
-print(f"Time in Hong Kong:\n {time_in_hong_kong}")
+def print_timezone(major_city: str, timezone: str) -> None:
+    city = zoneinfo.ZoneInfo(timezone)
+    time_in_city = datetime.now(city).strftime("%H:%M:%S")
+    print(f"Time in {major_city}:")
+    print_ic(f"{time_in_city}", BLUE)
 
-nairobi = zoneinfo.ZoneInfo("Africa/Nairobi")
-time_in_nairobi = datetime.now(nairobi)
-print(f"Time in Nairobi:\n {time_in_nairobi}")
+
+for each_city in timezones:
+    print_timezone(each_city, timezones[each_city])
