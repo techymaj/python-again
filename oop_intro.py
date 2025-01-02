@@ -1,9 +1,9 @@
 class Animal:
 
-    def __init__(self, name, age):
+    def __init__(self, name):
         self.name = name
-        self.age = age
+        self.alive = True
 
 
-dog = Animal("Rex", 4)
-print(dog.name)
+dog = Animal("Rex")
+print(f"{dog.name} is {'alive' if dog.alive else 'dead' }")
