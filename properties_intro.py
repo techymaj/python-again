@@ -12,6 +12,8 @@ class Circle:
 
     def del_radius(self):
         print("Radius deleted")
+        # When you write del self._radius,
+        # Python looks in the instance's __dict__ for the key _radius and removes it.
         del self._radius
 
     # Creating a property
@@ -22,3 +24,6 @@ circle = Circle(5)
 print(circle.radius_prop)  # Calls get_radius()
 circle.radius_prop = 10    # Calls set_radius()
 del circle.radius_prop      # Calls del_radius()
+
+# Attribute error
+print(circle.radius_prop)  # Calls get_radius()
