@@ -1,8 +1,8 @@
 class Circle:
-    def __init__(self, radius):
+    def __init__(self, radius: float):
         self._radius = radius  # Use a private attribute for internal storage
 
-    def get_radius(self):
+    def get_radius(self) -> float:
         return self._radius
 
     def set_radius(self, value):
