@@ -15,10 +15,10 @@ class Circle:
         del self._radius
 
     # Creating a property
-    radius = property(get_radius, set_radius, del_radius, "The radius of the circle")
+    radius_prop = property(fget=get_radius, fset=set_radius, fdel=del_radius, doc="The radius of the circle")
 
 # Usage
 circle = Circle(5)
-print(circle.radius)  # Calls get_radius()
-circle.radius = 10    # Calls set_radius()
-del circle.radius      # Calls del_radius()
+print(circle.radius_prop)  # Calls get_radius()
+circle.radius_prop = 10    # Calls set_radius()
+del circle.radius_prop      # Calls del_radius()
