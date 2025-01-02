@@ -22,7 +22,16 @@ class Dog(Animal, Species):
     def walk(self):
         print(f"{self._name} walks")
 
+    def eat(self, speed):
+        print(f"{self._name} eats very {speed}")
+
+    @overload
+    def eat(self, speed, style):
+        print(f"{self._name} eats very {speed} {style}")
+
 
 dog = Dog("Rex")
 dog.walk()
 dog.species()
+dog.eat("slowly")
+dog.eat("fast", "chewing")
