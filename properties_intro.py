@@ -27,3 +27,4 @@ del circle.radius_prop      # Calls del_radius()
 
 # Attribute error
 print(circle.radius_prop)  # Calls get_radius()
+print(circle._radius)  # Calls get_radius()
