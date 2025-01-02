@@ -6,7 +6,7 @@ class Account:
 
     def __init__(self, name: str, balance: float):
         self.name = name
-        self.__balance = balance  # private field
+        self.__balance = balance  # private field (Name mangling)
 
     def show_balance(self):
         print(f"The balance is {self.__balance}")
@@ -30,3 +30,5 @@ dfcu.balance = 0
 Account.show_balance(dfcu)
 Account.describe(dfcu)
 Account._show_something()
+print("*" * 10)
+Account._Account__show_date()  # accessing name mangled method
