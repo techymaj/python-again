@@ -1,6 +1,6 @@
 def fibonacci(n: int):
     start, next_number = 0, 1
-    for i in range(n):
+    for _ in range(n):
         yield start
         start, next_number = next_number, (next_number + start)
 
