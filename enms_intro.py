@@ -7,4 +7,5 @@ class Color(Enum):
 
 
 for color in Color:
-    print(color)
+    pass
+print(color)  # leaking loop control variable
